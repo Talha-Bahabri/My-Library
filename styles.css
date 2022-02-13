@@ -1,6 +1,7 @@
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
+    
 
 
 }
@@ -11,6 +12,8 @@
     padding: 20px;
     font-size: 25px;
     display: flex;
+
+    
 }
 
 .mainBody {
@@ -22,4 +25,230 @@
     background-color: blue;
     display: flex;
 }
+ */
+ .container-no-1{
+    display: flex;
+    background-color: #1f2937;
+    padding-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    
+}
 
+.website-name {
+    font-size:  35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bolder;
+    color: rgb(23, 196, 187);
+}
+
+.divide-to-col{
+    display: flex;
+    flex: 1;
+
+}
+
+.add-button {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(20, 162, 250);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    color: #F9FAF8;
+
+}
+
+.box1-in-conatiner1 {
+    flex:1;
+
+}
+.box2-in-conatiner1 {
+    flex: 1;
+}
+.box3-in-conatiner1 {
+    flex: 1;
+}
+.box4-in-conatiner1 {
+    flex: 1;
+    justify-self: center;
+    padding-left: 50px;
+}
+.image-side{
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+#main-text-container1{
+    font-size: 48px;
+    font-weight: bold;
+    color: #F9FAF8;
+
+}
+#secondary-text-container1{
+    font-size: 18px;
+    color: #E5E7EB;
+}
+.sign-in-button{
+    margin-left: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgb(20, 162, 250);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    color: #F9FAF8;
+
+}
+
+
+
+
+.logo{
+    width: 75px;
+    height: 75px;
+    padding-left: 50px;
+
+}
+.links{
+    /* text-align: right;
+    text-align: top; */
+    padding-left: 20px;
+    font-size: 20px;
+    color: white;
+
+}
+
+/* the second part which contain the 4 pics */
+.container-no-2{
+
+    display: flex;
+    padding-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    justify-content: center;
+
+}
+
+.divide-boxes{
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: center;
+
+}
+
+.box1-in-conatiner2{
+
+    display: flex;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+    align-self: center;
+    padding-bottom: 50px;
+    
+}
+
+
+.box2-in-conatiner2{
+
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    
+}   
+.images-in-container2{
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+.box2-in-conatiner2-items{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+
+}
+/* This is the third part of the page, The Quote */
+.container-no-3{
+    display: flex;
+    background-color: #E5E7EB;
+    padding-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    justify-content: center;
+    
+}
+
+.box1-in-conatiner3{
+    color: #1F2937;
+    font-style: italic;
+    font-size: 36px;
+
+}
+
+.name-of-quote-person{
+    display: flex;
+    justify-content: end;
+    margin-right: 20%;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+}
+/* This is the fourth part, the "call for action " box */
+.container-no-4{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.box1-in-conatiner4 {
+    display: flex;
+    margin: 35px;
+    padding: 20px;
+    justify-items: center;
+    border-radius: 20px;
+    background-color: #3882F6;
+
+}
+.box2-in-conatiner4 {
+    flex: 3;
+    font-size: 30px;
+    color: white;
+}
+.box3-in-conatiner4{
+    display: flex;
+    flex: 1 ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: gray;
+    justify-content: center;
+}
+.sign-up-button{
+    background-color: rgb(20, 162, 250);
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    color: #F9FAF8;
+
+}
+/* The footer contain the "copyright part" */
+.container-no-5{
+    display: flex;
+    justify-content: center;
+    background-color: #1F2937;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.829);
+}
