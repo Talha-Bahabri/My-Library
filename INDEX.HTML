@@ -7,7 +7,7 @@
     <title>Book Library</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 
 
 </head>
@@ -35,33 +35,33 @@
 
     <div class="container-no-2">
         <div class="divide-boxes">
-            <div class="box1-in-conatiner2"> 
+            <div class="box1-in-conatiner2">
+
                 <button class="add-button">ADD a Book</button>
+
+                <div id="overlay">
+                    <div class="overlay">
+                        <input class="input" type="text" id="title" placeholder="Title" required maxlenth="100">
+                        <input class="input" type="text" id="author" placeholder="Author" required maxlenth="100">
+                        <input class="input" type="text" id="pages" placeholder="Pages" required maxlenth="100">
+
+                        <p class="didYouReadIt">
+                            I have read this book.
+                        </p>
+                        <input class="input checkbox" type="checkbox" id="pages" placeholder="I have read this book" required maxlenth="100">
+
+                        <button class="submit-button">Submit</button>
+                        
+                         
+                    </div>
+                </div>
+ 
             </div>
 
             <div class="box2-in-conatiner2">
 
-                <div class="box2-in-conatiner2-items">
-                    <img src="images/french-fries.jpg" class="images-in-container2">
-                    <p><b>French fries </b>A classic one, add Kutchup for the best expernince.
-                    <br>somewhat difficult and time consuming, yet its worth the hassle.</p>
-                </div>
-
-                <div class="box2-in-conatiner2-items">
-                    <img src="images/baked-potates.jpg" class="images-in-container2">
-                    <p><b>Baked potatoes </b>can be easily done with other dishes in the oven.
-                    <br>You can be creative with it!</p>
-                </div>
-                <div class="box2-in-conatiner2-items">
-                    <img src="images/mashed-potato.jpg" class="images-in-container2">
-                    <p><b>Mashed potatoes </b> can be easily made into the main plate if done right. 
-                        <br> light and fluffy, yet simple and easy.</p>
-                </div>
-                <div class="box2-in-conatiner2-items">
-                    <img src="images/roasted-potatoes.jpg" class="images-in-container2">
-                    <p><b>Roasted potatoes </b>is great with everything. 
-                        <br> With it's crispy exterior to it's soft interior.</p>
-                </div>
+                <!-- here was the pics and discriptions for the potatoes
+                make it that it will add cards here of the books -->
                 
 
                 

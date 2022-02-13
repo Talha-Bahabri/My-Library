@@ -62,6 +62,10 @@
 
 }
 
+
+
+
+
 .box1-in-conatiner1 {
     flex:1;
 
@@ -252,3 +256,72 @@
     font-size: 20px;
     color: rgba(255, 255, 255, 0.829);
 }
+
+
+
+
+/* the overlay is used in add-button addButton is pressed */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  .overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 200px;
+      padding-top:  30px;
+      background-Color : 'transparent'; 
+      background-color: #3882F6;
+      border-radius: 50px;
+
+
+    }
+  input {
+    border: none;
+    margin-top: 20px;
+    margin:  5px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    outline: none; 
+  } 
+  .didYouReadIt {
+      color: aliceblue;
+  }
+ .checkbox{  
+     transform: scale(3);
+
+ }
+  input[type='text'],
+  input[type='number'] {
+    cursor: text;
+  }
+
+
+  .submit-button {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 162, 250);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    color: #F9FAF8;
+
+  }
