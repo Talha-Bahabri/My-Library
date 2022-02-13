@@ -56,6 +56,7 @@ function overlayON() {
   document.getElementById("overlay").style.display = "block";
 }
 
+  
 function overlayOFF() {
   console.log(`It will show the infos of the object first `)
   document.getElementById("overlay").style.display = "none";
