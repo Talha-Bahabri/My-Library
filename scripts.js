@@ -54,15 +54,22 @@ const addButton = document.querySelector(`.add-button`);
 addButton.addEventListener("click" , overlayON );
 //submitButton.addEventListener("click" , overlayOFF );
 
-let titleField = document.querySelector(`.title`) 
+let titleField = document.getElementById(`title`) 
 let authorField = document.getElementById(`author`)  
 let pagesField = document.getElementById(`pages`) 
+// this needs to be fixed True/False
 let readBoxField = document.getElementById(`readBox`)   
- 
+   
 const submitButton = document.querySelector(`.submit-button`);
   
 function submitForm() {
-  console.log(`@@@@@@It will show the infos of the object first `);   
+  console.log(`@@@@@@It will show the infos of the object first `); 
+  
+
+  console.log(titleField.value)
+  console.log(authorField.value)
+  console.log(pagesField.value)
+  console.log(readBoxField.value)
 }
 submitButton.addEventListener("click" , submitForm );
 
