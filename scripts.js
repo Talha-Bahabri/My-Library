@@ -62,10 +62,7 @@ let readBoxField = document.getElementById(`readBox`)
 const submitButton = document.querySelector(`.submit-button`);
   
 function submitForm() {
-  console.log(`@@@@@@It will show the infos of the object first `);  
-  let titleFieldInfo  = titleField.textContent;
-  console.log(titleFieldInfo);
-
+  console.log(`@@@@@@It will show the infos of the object first `);   
 }
 submitButton.addEventListener("click" , submitForm );
 
@@ -113,3 +110,12 @@ console.log('the objects are added to the array')
 
 
  
+const testField = document.getElementById("test1")
+const testWord = document.getElementById("test2")
+const testBtn = document.getElementById("testbtn") 
+
+function test() {
+  console.log("the btn works")
+  testWord.textContent =  document.getElementById('test1').value;
+}
+testBtn.addEventListener("click" , test);
