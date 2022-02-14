@@ -32,44 +32,67 @@ function addBookToLibrary() {
   }
 
   
-let theHobbit = new book("The Hobbit" , "J.R.R. Tolkien" , 295, true) ;
+// let theHobbit = new book("The Hobbit" , "J.R.R. Tolkien" , 295, true) ;
 
-console.log(theHobbit.info());
+// console.log(theHobbit.info());
 
 //here is only testing if the function is working in the console
 console.log(`Here is myLibrary array ${myLibrary}`);
 
 console.log(`we will make 2 objects with some infos in it`);
 
-function Player(name, age) {
-  this.name = name
-  this.age = age
-  
-} 
 
 Player.prototype.sayName = function() {
   console.log(this.name) ;
 }
 
-//these functions for the overlay, on click and off ....  need more attention 
-function overlayON() {
-  document.getElementById("overlay").style.display = "block";
-}
 
-  
-function overlayOFF() {
-  console.log(`It will show the infos of the object first `)
-  document.getElementById("overlay").style.display = "none";
-}
+
 
 
 const addButton = document.querySelector(`.add-button`);
 addButton.addEventListener("click" , overlayON );
+//submitButton.addEventListener("click" , overlayOFF );
 
+let titleField = document.querySelector(`.title`) 
+let authorField = document.getElementById(`author`)  
+let pagesField = document.getElementById(`pages`) 
+let readBoxField = document.getElementById(`readBox`)   
+ 
 const submitButton = document.querySelector(`.submit-button`);
-submitButton.addEventListener("click" , overlayOFF );
+  
+function submitForm() {
+  console.log(`@@@@@@It will show the infos of the object first `);  
+  let titleFieldInfo  = titleField.textContent;
+  console.log(titleFieldInfo);
+
+}
+submitButton.addEventListener("click" , submitForm );
 
 
+
+ 
+
+
+//these functions for the overlay, on click and off ....  need more attention 
+function overlayON() {
+  console.log(`###############overlay is on `)
+  document.getElementById("overlay").style.display = "block";
+}
+
+  
+function overlayOFF() { 
+  console.log(`###############overlay is off `)
+  document.getElementById("overlay").style.display = "none";
+}
+ 
+
+
+function Player(name, age) {
+  this.name = name
+  this.age = age
+  
+} 
 const playerOne = new Player(`jojojoj` , 50);
 const playerTwo = new Player(`hehe` , 202);
 
