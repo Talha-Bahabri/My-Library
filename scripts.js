@@ -71,14 +71,16 @@ function submitForm() {
   console.log(`Here is myLibrary array `);
   console.log(`${myLibrary.at(-1).info()}`) 
   console.log(`${myLibrary.length}`) ;
-
- 
-
-
+  overlayOFF(); 
 }
 
 
-submitButton.addEventListener("click" , submitForm );
+submitButton.addEventListener("click" , (event) => {
+   
+  submitForm()
+});
+const cancelButtonh = document.getElementById("cancel-button")
+cancelButtonh.addEventListener("click" , overlayOFF );
 
 
 
@@ -95,24 +97,42 @@ function overlayON() {
 function overlayOFF() { 
   console.log(`###############overlay is off `)
   document.getElementById("overlay").style.display = "none";
+} 
+
+
+//THIS PART HERE IS ADDING THE <DIV> AND <P> and adding info
+
+
+function printACard () {
+  const libraryCardsSelector = document.querySelector(`.libraryCards`);
+
+  const cardToAdd = document.createElement(`div`);
+  cardToAdd.classList.add(`cards`);
+  
+  const pTitle = document.createElement(`p`);
+  pTitle.classList.add(`infoInCards`)
+  pTitle.textContent = `${myLibrary}`; @@@@ change the values here so it prints the last object in the library arrary
+  
+  const pAuthor = document.createElement(`p`);
+  pAuthor.classList.add(`infoInCards`)
+  pAuthor.textContent = `Jj I don't `;
+  
+  const pPages = document.createElement(`p`);
+  pPages.classList.add(`infoInCards`)
+  pPages.textContent = `224`;
+  
+  const pIsRead = document.createElement(`p`);
+  pIsRead.classList.add(`infoInCards`)
+  pIsRead.textContent = `true`;
+  
+  cardToAdd.appendChild(pTitle);
+  cardToAdd.appendChild(pAuthor);
+  cardToAdd.appendChild(pPages);
+  cardToAdd.appendChild(pIsRead);
+  
+  libraryCardsSelector.appendChild(cardToAdd);
+  
 }
- 
-
-//THIS PART HERE IS ADDING THE <DIV> AND <P> 
-const libraryCardsSelector = document.querySelector(`.libraryCards`);
-
-const cardToAdd = document.createElement(`div`);
-cardToAdd.classList.add(`cards`);
-
-const paragraphAdded = document.createElement(`p`);
-
-paragraphAdded.textContent = `hehehehehehe`;
-
-cardToAdd.appendChild(paragraphAdded);
-
-libraryCardsSelector.appendChild(cardToAdd);
-
-
 
  
 // myLibrary.push(playerOne , playerTwo);
