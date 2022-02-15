@@ -41,10 +41,7 @@ console.log(`Here is myLibrary array ${myLibrary}`);
 
 console.log(`we will make 2 objects with some infos in it `);
 
-
-Player.prototype.sayName = function() {
-  console.log(this.name) ;
-}
+ 
 
 
 
@@ -101,15 +98,23 @@ function overlayOFF() {
 }
  
 
+//THIS PART HERE IS ADDING THE <DIV> AND <P> 
+const libraryCardsSelector = document.querySelector(`.libraryCards`);
 
-function Player(name, age) {
-  this.name = name
-  this.age = age
-  
-} 
-const playerOne = new Player(`jojojoj` , 50);
-const playerTwo = new Player(`hehe` , 202);
+const cardToAdd = document.createElement(`div`);
+cardToAdd.classList.add(`cards`);
 
+const paragraphAdded = document.createElement(`p`);
+
+paragraphAdded.textContent = `hehehehehehe`;
+
+cardToAdd.appendChild(paragraphAdded);
+
+libraryCardsSelector.appendChild(cardToAdd);
+
+
+
+ 
 // myLibrary.push(playerOne , playerTwo);
 // console.log(`printing the objects info now `) ;
 // console.log(myLibrary[0]);
@@ -120,19 +125,13 @@ const playerTwo = new Player(`hehe` , 202);
 
 // @@@@@@@@@@@@@@@@###$$$$$$$$$$$$$$
 // check the " javascript paper" in the desk for more details 
-
  
+// const testField = document.getElementById("test1")
+// const testWord = document.getElementById("test2")
+// const testBtn = document.getElementById("testbtn") 
 
-
-
-
- 
-const testField = document.getElementById("test1")
-const testWord = document.getElementById("test2")
-const testBtn = document.getElementById("testbtn") 
-
-function test() {
-  console.log("the btn works")
-  testWord.textContent =  document.getElementById('test1').value;
-}
-testBtn.addEventListener("click" , test);
+// function test() {
+//   console.log("the btn works")
+//   testWord.textContent =  document.getElementById('test1').value;
+// }
+// testBtn.addEventListener("click" , test);

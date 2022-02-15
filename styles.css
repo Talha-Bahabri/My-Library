@@ -53,6 +53,8 @@
 
 
 
+
+
 .box1-in-conatiner1 {
     flex:1;
 
@@ -146,7 +148,7 @@
     padding-bottom: 50px;
     
 }
-
+/* 
 
 .box2-in-conatiner2{
 
@@ -154,7 +156,7 @@
     justify-content: space-evenly;
     font-size: 20px;
     
-}   
+}    */
 .images-in-container2{
     border-radius: 25px;
     width: 200px;
@@ -315,4 +317,19 @@
     border-radius: 50px;
     color: #F9FAF8;
 
+  }
+
+  .libraryCards {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 20px;
+      margin: 20px;
+      padding: 20px; 
+ 
+  }
+
+  .cards {
+      display: flex;
+      flex-direction: column;
+      background-color: red;
   }
