@@ -39,7 +39,7 @@ function addBookToLibrary() {
 //here is only testing if the function is working in the console
 console.log(`Here is myLibrary array ${myLibrary}`);
 
-console.log(`we will make 2 objects with some infos in it`);
+console.log(`we will make 2 objects with some infos in it `);
 
 
 Player.prototype.sayName = function() {
@@ -65,12 +65,22 @@ const submitButton = document.querySelector(`.submit-button`);
 function submitForm() {
   console.log(`@@@@@@It will show the infos of the object first `); 
   
+  let titleToObject = new book(titleField.value , authorField.value , pagesField.value , true)
+    
+  myLibrary.push(titleToObject);
+  
+  console.log(`we added an object to the libarary ***************`)
+   
+  console.log(`Here is myLibrary array `);
+  console.log(`${myLibrary.at(-1).info()}`) 
+  console.log(`${myLibrary.length}`) ;
 
-  console.log(titleField.value)
-  console.log(authorField.value)
-  console.log(pagesField.value)
-  console.log(readBoxField.value)
+ 
+
+
 }
+
+
 submitButton.addEventListener("click" , submitForm );
 
 
@@ -100,12 +110,12 @@ function Player(name, age) {
 const playerOne = new Player(`jojojoj` , 50);
 const playerTwo = new Player(`hehe` , 202);
 
-myLibrary.push(playerOne , playerTwo);
-console.log(`printing the objects info now `) ;
-console.log(myLibrary[0]);
-console.log(myLibrary[1]);
+// myLibrary.push(playerOne , playerTwo);
+// console.log(`printing the objects info now `) ;
+// console.log(myLibrary[0]);
+// console.log(myLibrary[1]);
 
-console.log('the objects are added to the array')
+// console.log('the objects are added to the array')
 
 
 // @@@@@@@@@@@@@@@@###$$$$$$$$$$$$$$
