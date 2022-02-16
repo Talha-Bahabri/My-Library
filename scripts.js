@@ -8,7 +8,7 @@ function book(title , author , pages , isRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.isRead = false;
+    this.isRead = isRead;
 
 
     this.info = function() {
@@ -29,13 +29,7 @@ function book(title , author , pages , isRead) {
 
 function addBookToLibrary() {
     // do stuff here
-  }
-
-   
-
-
-
-
+  } 
 
 const addButton = document.querySelector(`.add-button`);
 addButton.addEventListener("click" , overlayON ); 
@@ -48,29 +42,22 @@ let readBoxField = document.getElementById(`readBox`)
    
 const submitButton = document.querySelector(`.submit-button`);
   
-function submitForm() {
-  console.log(`@@@@@@It will show the infos of the object first `); 
-  
+
+function submitForm() { 
   let titleToObject = new book(titleField.value , authorField.value , pagesField.value , true)
     
   myLibrary.push(titleToObject);
-  
-  console.log(`we added an object to the libarary ***************`)
    
-  console.log(`Here is myLibrary array `);
-  console.log(`${myLibrary.at(-1).info()}`) 
-  console.log(`${myLibrary.length}`) ;
   overlayOFF(); 
+
+
 }
 
 
 submitButton.addEventListener("click" , (event) => {
    
-  submitForm()
-  
-  printACard ()
-
-
+    submitForm() 
+    printACard()  
 });
 
 const cancelButtonh = document.getElementById("cancel-button")
@@ -89,7 +76,11 @@ function overlayON() {
 
   
 function overlayOFF() { 
-  console.log(`###############overlay is off `)
+
+  titleField.textContent = ``;
+  authorField.textContent = ``;
+  pagesField.textContent = ``;
+  readBoxField.textContent = ``;
   document.getElementById("overlay").style.display = "none";
 } 
 
