@@ -8,10 +8,13 @@
     padding-bottom: 20px;
     
 }
-
+@font-face {
+    font-family: 'website-name-font';
+    src: url('fonts/Redressed-Regular.ttf');
+}
 .website-name {
     font-size:  35px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: website-name-font;
     font-style: bolder;
     color: rgb(23, 196, 187);
 }
@@ -49,32 +52,9 @@
 
 
 }
-
-
-
-
-
-
-
-.box1-in-conatiner1 {
-    flex:1;
-
-}
-.box2-in-conatiner1 {
+ 
+.main-Text {
     flex: 1;
-}
-.box3-in-conatiner1 {
-    flex: 1;
-}
-.box4-in-conatiner1 {
-    flex: 1;
-    justify-self: center;
-    padding-left: 50px;
-}
-.image-side{
-    width: 350px;
-    height: 300px;
-    border-radius: 20px;
 }
 
 #main-text-container1{
@@ -86,26 +66,12 @@
 #secondary-text-container1{
     font-size: 18px;
     color: #E5E7EB;
-}
-.sign-in-button{
-    margin-left: 100px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background-color: rgb(20, 162, 250);
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 50px;
-    color: #F9FAF8;
-
-}
-
-
-
-
+} 
+ 
 .logo{
     width: 75px;
     height: 75px;
-    padding-left: 50px;
+    margin-right: 20px;
 
 }
 .links{

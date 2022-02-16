@@ -31,25 +31,14 @@ function addBookToLibrary() {
     // do stuff here
   }
 
-  
-// let theHobbit = new book("The Hobbit" , "J.R.R. Tolkien" , 295, true) ;
-
-// console.log(theHobbit.info());
-
-//here is only testing if the function is working in the console
-console.log(`Here is myLibrary array ${myLibrary}`);
-
-console.log(`we will make 2 objects with some infos in it `);
-
- 
+   
 
 
 
 
 
 const addButton = document.querySelector(`.add-button`);
-addButton.addEventListener("click" , overlayON );
-//submitButton.addEventListener("click" , overlayOFF );
+addButton.addEventListener("click" , overlayON ); 
 
 let titleField = document.getElementById(`title`) 
 let authorField = document.getElementById(`author`)  
@@ -129,7 +118,7 @@ function printACard () {
   const pIsRead = document.createElement(`p`);
   pIsRead.classList.add(`infoInCards`)
 
-  //here is to write 
+  //here is to write if the book has been read or not
   let toWriteRead ;
    if (myLibrary.at(-1).isRead) {
     toWriteRead = `I have read it`
@@ -147,32 +136,4 @@ function printACard () {
   libraryCardsSelector.appendChild(cardToAdd);
   
 }
-
-
-
-// let theHobbit = new book("The Hobbit" , "J.R.R. Tolkien" , 295, true) ;
-// myLibrary.push(theHobbit);
-// printACard ()
-
-
  
-// myLibrary.push(playerOne , playerTwo);
-// console.log(`printing the objects info now `) ;
-// console.log(myLibrary[0]);
-// console.log(myLibrary[1]);
-
-// console.log('the objects are added to the array')
-
-
-// @@@@@@@@@@@@@@@@###$$$$$$$$$$$$$$
-// check the " javascript paper" in the desk for more details 
- 
-// const testField = document.getElementById("test1")
-// const testWord = document.getElementById("test2")
-// const testBtn = document.getElementById("testbtn") 
-
-// function test() {
-//   console.log("the btn works")
-//   testWord.textContent =  document.getElementById('test1').value;
-// }
-// testBtn.addEventListener("click" , test);
