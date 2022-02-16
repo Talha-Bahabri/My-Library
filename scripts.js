@@ -5,7 +5,7 @@ let myLibrary = [];
 
 
 function book(title , author , pages , isRead) { 
-    this.name = title;
+    this.title = title;
     this.author = author;
     this.pages = pages;
     this.isRead = false;
@@ -78,7 +78,12 @@ function submitForm() {
 submitButton.addEventListener("click" , (event) => {
    
   submitForm()
+  
+  printACard ()
+
+
 });
+
 const cancelButtonh = document.getElementById("cancel-button")
 cancelButtonh.addEventListener("click" , overlayOFF );
 
@@ -111,19 +116,28 @@ function printACard () {
   
   const pTitle = document.createElement(`p`);
   pTitle.classList.add(`infoInCards`)
-  pTitle.textContent = `${myLibrary}`; @@@@ change the values here so it prints the last object in the library arrary
-  
+  pTitle.textContent = `Title :${myLibrary.at(-1).title}`;  
+
   const pAuthor = document.createElement(`p`);
   pAuthor.classList.add(`infoInCards`)
-  pAuthor.textContent = `Jj I don't `;
+  pAuthor.textContent = `Author : ${myLibrary.at(-1).author}`;
   
   const pPages = document.createElement(`p`);
   pPages.classList.add(`infoInCards`)
-  pPages.textContent = `224`;
+  pPages.textContent =  `Pages :${myLibrary.at(-1).pages}`;
   
   const pIsRead = document.createElement(`p`);
   pIsRead.classList.add(`infoInCards`)
-  pIsRead.textContent = `true`;
+
+  //here is to write 
+  let toWriteRead ;
+   if (myLibrary.at(-1).isRead) {
+    toWriteRead = `I have read it`
+   }
+   else {
+     toWriteRead = 'I did not read it @@@@ THIS NEED FIXING SOON'
+   }
+  pIsRead.textContent = `Did you read it ? ${toWriteRead}`;
   
   cardToAdd.appendChild(pTitle);
   cardToAdd.appendChild(pAuthor);
@@ -133,6 +147,13 @@ function printACard () {
   libraryCardsSelector.appendChild(cardToAdd);
   
 }
+
+
+
+// let theHobbit = new book("The Hobbit" , "J.R.R. Tolkien" , 295, true) ;
+// myLibrary.push(theHobbit);
+// printACard ()
+
 
  
 // myLibrary.push(playerOne , playerTwo);
