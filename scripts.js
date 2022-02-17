@@ -10,19 +10,7 @@ function book(title , author , pages , isRead) {
     this.pages = pages;
     this.isRead = isRead;
 
-
-    this.info = function() {
-        let readInText = ``
-        if (isRead) {
-            readInText = `Is finished` ;
-        }
-        else {
-            readInText = `not yet read` ;
-        }
-
-    return `${title} by ${author}, ${pages} pages, ${readInText} `;
-  }
-
+ 
 
 }
 
@@ -38,16 +26,14 @@ let titleField = document.getElementById(`title`)
 let authorField = document.getElementById(`author`)  
 let pagesField = document.getElementById(`pages`) 
 // this needs to be fixed True/False
-let readBoxField = document.getElementById(`readBox`)   
-   
+let readBoxField = document.getElementById(`readBox`);
 const submitButton = document.querySelector(`.submit-button`);
   
 
 function submitForm() { 
-  let titleToObject = new book(titleField.value , authorField.value , pagesField.value , true)
+  let titleToObject = new book(titleField.value , authorField.value , pagesField.value , readBoxField.checked)
     
-  myLibrary.push(titleToObject);
-   
+  myLibrary.push(titleToObject); 
   overlayOFF(); 
 
 
@@ -68,10 +54,9 @@ submitButton.addEventListener("click" , (event) => {
       isWarningTextAppeared = false;
     }
 
-
-
   }
   else { 
+    console.log(`${readBoxField.value}`)
     submitForm() 
     printACard() 
   } 
@@ -128,13 +113,14 @@ function printACard () {
 
   //here is to write if the book has been read or not
   let toWriteRead ;
-   if (myLibrary.at(-1).isRead) {
-    toWriteRead = `I have read it`
+   if (myLibrary.at(-1).isRead) { 
+    toWriteRead = `Finished`
+
    }
    else {
-     toWriteRead = 'I did not read it @@@@ THIS NEED FIXING SOON'
+     toWriteRead = 'NOT Read yet' 
    }
-  pIsRead.textContent = `Did you read it ? ${toWriteRead}`;
+  pIsRead.textContent = `${toWriteRead}`;
   
   cardToAdd.appendChild(pTitle);
   cardToAdd.appendChild(pAuthor);

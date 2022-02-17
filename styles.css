@@ -206,16 +206,23 @@
   .cards {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       margin-left: 25px;
       margin-right: 25px;
-      background-color: rgb(134, 134, 134);
+      min-height: 350px;
+      min-width: 250px;
+      background-color: rgb(134, 134, 134);  
       border-radius: 20px; 
+ 
        
   }
 
   .infoInCards {
-      margin: 20px;
+      font-weight: bold; 
+      font-size: 30px;
+      margin: 20px; 
   }
+ 
 
   .warning-Text {
       color: rgb(167, 0, 0); 
