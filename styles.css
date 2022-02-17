@@ -121,7 +121,7 @@
 
 
 /* the overlay is used in add-button addButton is pressed */
-#overlay {
+#overlay { 
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -198,7 +198,6 @@
       font-size: 20px;
       margin: 20px; 
       padding: 20px;  
- 
       flex-grow: 1; 
       padding: 50px;
       justify-content: center;
@@ -210,11 +209,16 @@
       margin-left: 25px;
       margin-right: 25px;
       background-color: rgb(134, 134, 134);
-      border-radius: 20px;
+      border-radius: 20px; 
+       
   }
 
   .infoInCards {
       margin: 20px;
+  }
+
+  .warning-Text {
+      color: rgb(167, 0, 0); 
   }
 
 /* The footer contain the "copyright part" */

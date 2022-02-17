@@ -53,11 +53,28 @@ function submitForm() {
 
 }
 
+let isWarningTextAppeared = true
 
 submitButton.addEventListener("click" , (event) => {
-   
+   console.log(`title field is : ${titleField.value}`);
+  if (titleField.value===`` || authorField.value===`` || pagesField.value===``){
+    console.log(`a field is  empty`)
+    if (isWarningTextAppeared) {
+      const warninText = document.createElement(`p`);
+      warninText.classList.add(`warning-Text`)
+      warninText.textContent = `You need to fill all the fields`;
+      const overlayDiv = document.querySelector(`.overlay`)
+      overlayDiv.appendChild(warninText);
+      isWarningTextAppeared = false;
+    }
+
+
+
+  }
+  else { 
     submitForm() 
-    printACard()  
+    printACard() 
+  } 
 });
 
 const cancelButtonh = document.getElementById("cancel-button")
